@@ -1,33 +1,19 @@
 import React, { Component } from 'react';
 import { View, TouchableOpacity, StyleSheet, Text } from 'react-native';
 import { LinearGradient } from 'expo';
-import { TWITTER_API_KEY } from 'react-native-dotenv'
-import Auth0 from 'react-native-auth0';
-
-const auth0 = new Auth0({ domain: 'twitter-ai.auth0.com', clientId: TWITTER_API_KEY });
+// import { TWITTER_API_KEY } from 'react-native-dotenv';
 
 export default class twitterLogIn extends Component {
 
-	constructor(props) {
-	    super(props);
-	    this.state = { 
-	    	accessToken: null 
-	    };
-	  }
+	// constructor(props) {
+	//     super(props);
+	//     this.state = { 
+	//     	null
+	//     };
+	//   }
 
 	 _logIn = () => {
-		auth0.webAuth
-	    	.authorize({
-	    		scope: 'openid profile',
-	    		audience: 'https://' + 'twitter-ai.auth0.com' + '/userinfo'
-	    })
-	    .then(credentials => {
-	      console.log(credentials)
-	      // Successfully authenticated
-	      // Store the accessToken
-	      this.setState({ accessToken: credentials.accessToken });
-	    })
-	    .catch(error => console.log(error));
+
 	}
 
 	render() {
