@@ -21,12 +21,12 @@ export default class twitterLogIn extends Component {
 	    		scope: 'openid profile',
 	    		audience: 'https://' + 'twitter-ai.auth0.com' + '/userinfo'
 	    })
-	    .then(credentials =>
+	    .then(credentials => {
 	      console.log(credentials)
 	      // Successfully authenticated
 	      // Store the accessToken
 	      this.setState({ credentials.accessToken });
-	    )
+	    })
 	    .catch(error => console.log(error));
 	}
 
