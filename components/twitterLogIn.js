@@ -25,7 +25,7 @@ export default class twitterLogIn extends Component {
 	      console.log(credentials)
 	      // Successfully authenticated
 	      // Store the accessToken
-	      this.setState({ credentials.accessToken });
+	      this.setState({ accessToken: credentials.accessToken });
 	    })
 	    .catch(error => console.log(error));
 	}
