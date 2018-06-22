@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { View, TouchableOpacity, StyleSheet, Text } from 'react-native';
 import { LinearGradient } from 'expo';
 import { TWITTER_API_KEY } from 'react-native-dotenv'
-import auth0 from 'react-native-auth0';
+import Auth0 from 'react-native-auth0';
 
 const auth0 = new Auth0({ domain: 'twitter-ai.auth0.com', clientId: TWITTER_API_KEY });
 

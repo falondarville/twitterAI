@@ -4,15 +4,24 @@ import { View, StyleSheet, Text, TextInput } from 'react-native';
 export default class Analytics extends Component{
 
 	constructor(props) {
-	    super(props);
-	    this.state = { text: 'Start typing...' };
+	    super();
+	    this.state = { 
+	    	text: 'Start typing...' 
+	    };
 	}
 
 	render(){
 		return(
 			<View style={styles.container}>
 				<Text>Type in your Tweet</Text>
-				<TextInput multiline={true} numberOfLines={4} style={styles.textInput} onChange={(text) => this.setState({text}) value={this.state.text}}></TextInput>
+					<TextInput 
+						multiline={true} 
+						numberOfLines={4} 
+						style={styles.textInput} 
+						onChangeText={(text) => this.setState({text})} 
+						value={this.state.text}
+					>
+					</TextInput>
 			</View>
 			)
 	}
